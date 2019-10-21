@@ -10,7 +10,7 @@ angular
       Spotify.login().then(function (data) {
         console.log(data);
         alert("You are now logged in");
-        Spotify.getCurrentPlaying().then(function (data) {
+        Spotify.getCurrentlyPlaying().then(function (data) {
           console.log(data)
         }, function () {
             
