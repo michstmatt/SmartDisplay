@@ -1,0 +1,3 @@
+[submodule "src/modules/spotify/angular-spotify"]
+	path = src/modules/spotify/angular-spotify
+	url = https://github.com/eddiemoore/angular-spotify.git
