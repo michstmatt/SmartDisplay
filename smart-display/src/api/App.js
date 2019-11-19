@@ -9,8 +9,12 @@ app.use(bodyparser.json())
 
 app.post('/api/ring/login', function (req, res, next) {
   ring.authenticate(axios, req.body.username, req.body.password)
-    .then(response => res.json({success : true}))
-    .catch(err => res.json({sucess: false, error: JSON.stringify(err)}));
+    .then(response => res.json({success : response}));
+    //.catch(err => res.json({success: false}));
+});
+
+app.get('/api/ring/isLoggedIn', function(req, res, next) {
+    res.json({authenticated : ring.isAuthenticated()});
 });
 
 app.listen(5000, function () {
